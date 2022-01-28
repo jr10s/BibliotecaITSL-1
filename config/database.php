@@ -35,21 +35,21 @@ return [
 
     'connections' => [
 
-        'sqlite' => [
+       /*  'sqlite' => [
             'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
-        ],
+        ], */        
 
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'forge'),
-            'username' => env('DB_USERNAME', 'forge'),
+            'database' => env('DB_DATABASE', 'Biblioteca'),
+            'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', ''),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
@@ -63,7 +63,16 @@ return [
             ]) : [],
         ],
 
-        'pgsql' => [
+        'odbc' => array(
+            'driver' => 'odbc',
+            'dsn' => 'Driver={Actual Access};System=sicenetx;',
+            'grammar' => 'DB2',
+            'username' => 'foo',
+            'password' => 'bar',
+            'database' => '',
+        ),
+
+        /* 'pgsql' => [
             'driver' => 'pgsql',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
@@ -77,8 +86,8 @@ return [
             'schema' => 'public',
             'sslmode' => 'prefer',
         ],
-
-        'sqlsrv' => [
+ */
+       /*  'sqlsrv' => [
             'driver' => 'sqlsrv',
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', 'localhost'),
@@ -89,7 +98,7 @@ return [
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
-        ],
+        ], */
 
     ],
 
@@ -117,7 +126,7 @@ return [
     |
     */
 
-    'redis' => [
+    /* 'redis' => [
 
         'client' => env('REDIS_CLIENT', 'phpredis'),
 
@@ -143,5 +152,5 @@ return [
         ],
 
     ],
-
+ */
 ];
